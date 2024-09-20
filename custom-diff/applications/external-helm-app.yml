@@ -9,13 +9,10 @@ spec:
   project: default
   ignoreDifferences:
   - group: apps
-    kind: Secret
-    jsonPointers:
-    - /data/my-password
-  - group: apps
     kind: Deployment
     jsonPointers:
-    - /metadata/annotations/creation    
+    - /data/my-password
+    - /metadata/annotations/creation 
 
   source:
     repoURL: https://github.com/dan-close/gitops-cert-level-2-examples.git
